@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="whatsapp_package">com.whatsapp</string>
+    <string name="whatsapp_business_package">com.whatsapp.w4b</string>
+    <string name="gbwhatsapp_package">com.gbwhatsapp</string>
+    <string name="csv_source">CSV</string>
+    <string name="contacts_source">Contacts</string>
+</resources>

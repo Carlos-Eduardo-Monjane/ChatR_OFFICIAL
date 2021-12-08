@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:defaultNavHost="true"
+    app:startDestination="@+id/nav_home">
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.vtrixdigital.chatr.ui.fragments.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_sentMessages"
+        android:name="com.vtrixdigital.chatr.ui.fragments.sent.SentFragment"
+        android:label="@string/menu_sent_messages"
+        tools:layout="@layout/fragment_sent" />
+
+    <fragment
+        android:id="@+id/nav_messageANumber"
+        android:name="com.vtrixdigital.chatr.ui.activities.MessageANumber"
+        android:label="@string/menu_messageANumber"
+        tools:layout="@layout/message_a_number" />
+
+    <activity
+        android:id="@+id/nav_bulk_sender"
+        android:name="com.vtrixdigital.chatr.ui.activities.BulkMessagingActivity"
+        android:label="@string/bulk_messaging"
+        tools:layout="@layout/activity_bulk_messaging" />
+
+    <fragment
+        android:id="@+id/nav_rateus"
+        android:name="com.vtrixdigital.chatr.ui.fragments.rate.RateFragment"
+        android:label="@string/menu_rateus"
+        tools:layout="@layout/fragment_rateus" />
+    <fragment
+        android:id="@+id/nav_policy"
+        android:name="com.vtrixdigital.chatr.ui.fragments.policy.PolicyFragment"
+        android:label="@string/menu_policy"
+        tools:layout="@layout/fragment_policy" />
+    <fragment
+        android:id="@+id/nav_terms"
+        android:name="com.vtrixdigital.chatr.ui.fragments.terms.TermsFragment"
+        android:label="@string/menu_terms"
+        tools:layout="@layout/fragment_terms" />
+
+</navigation>

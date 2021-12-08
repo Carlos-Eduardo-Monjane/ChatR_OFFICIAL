@@ -1,0 +1,463 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/done_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/teal_700"
+        android:contentDescription="@string/save_button"
+        android:src="@drawable/ic_baseline_check_24"
+        app:tint="@color/white" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/delete_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="@dimen/margin_sixteen"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#F44336"
+        android:contentDescription="@string/delete_button"
+        android:src="@drawable/ic_baseline_delete_24"
+        android:visibility="gone"
+        app:tint="@color/white" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:id="@+id/chatLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_weight="1.5"
+                        android:background="@drawable/incoming_bubble"
+                        android:gravity="start">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/expected_msg_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/padding_15"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginBottom="10dp"
+                    android:baselineAligned="false"
+                    android:gravity="end"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:background="@drawable/outgoing_bubble"
+                        android:gravity="start">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/reply_msg_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/padding_15"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorGrey" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_15"
+                        >
+
+                        <EditText
+                            android:id="@+id/message_received"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:autofillHints="@string/receiving_message"
+                            android:hint="@string/receiving_message" />
+
+                        <RadioGroup
+                            android:id="@+id/groupradio"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/radia_id1"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableEnd="@drawable/ic_baseline_info_24"
+                                android:drawableTint="@color/teal_700"
+                                android:text="@string/exact_match"
+                                android:textSize="17sp" />
+
+                            <RadioButton
+                                android:id="@+id/radia_id2"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableEnd="@drawable/ic_baseline_info_24"
+                                android:drawableTint="@color/teal_700"
+                                android:text="@string/similarly_match1"
+                                android:textSize="17sp" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding_15">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1"
+                            >
+
+                            <EditText
+                                android:id="@+id/message_reply"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:autofillHints="@string/replying_message"
+                                android:hint="@string/replying_message"
+                                android:singleLine="false"
+                                android:minLines="1"
+                                android:maxLines="100"
+                                android:inputType="textMultiLine" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_15">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tags"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/chipGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <!-- Chips can be declared here, or added dynamically. -->
+
+                            <!-- Chips can be declared here, or added dynamically. -->
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chip_info"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/info"
+                                app:chipIcon="@drawable/ic_baseline_info_24"
+                                app:chipIconTint="@color/Granite" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chip_fname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/chip_fname"
+                                android:textColor="@color/black"
+                                app:chipBackgroundColor="@color/chatBubbleLight" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chip_lname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/chip_lname"
+                                android:textColor="@color/black"
+                                app:chipBackgroundColor="@color/chatBubbleLight" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chip_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/chip_date"
+                                android:textColor="@color/black"
+                                app:chipBackgroundColor="@color/chatBubbleLight" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chip_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/chip_time"
+                                android:textColor="@color/black"
+                                app:chipBackgroundColor="@color/chatBubbleLight" />
+                        </com.google.android.material.chip.ChipGroup>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_15">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/server_reply_switch_text"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.7"
+                            android:text="@string/server_reply"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/server_reply_switch"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:checked="false"
+                            android:textColorHighlight="@color/teal_700" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/server_reply_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/server_config_message"
+                                android:textColor="@color/colorBlindBlack"
+                                android:textSize="14sp"
+                                android:textStyle="italic" />
+
+                            <EditText
+                                android:id="@+id/server_url"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:autofillHints="https://"
+                                android:hint="@string/server_url"
+                                android:inputType="textUri" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/server_headers"
+                                    android:textColor="@color/colorBlindBlack" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="horizontal">
+
+                                    <EditText
+                                        android:id="@+id/header_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="60dp"
+                                        android:layout_weight="1"
+                                        android:autofillHints="API_KEY"
+                                        android:hint="@string/name1"
+                                        android:inputType="textPersonName"
+                                        android:padding="@dimen/padding_15"
+                                        tools:ignore="TooDeepLayout" />
+
+                                    <EditText
+                                        android:id="@+id/header_value"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="60dp"
+                                        android:layout_weight="1"
+                                        android:autofillHints="API_KEY_VALUE"
+                                        android:hint="@string/value"
+                                        android:inputType="textPersonName"
+                                        android:padding="@dimen/padding_15"
+                                        tools:ignore="TooDeepLayout" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/request_parameters"
+                                android:textColor="@color/colorBlindBlack" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/rectangle_background"
+                                android:orientation="vertical"
+                                android:padding="@dimen/padding_15">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/message_url"
+                                    android:textColor="@color/colorBlindBlack"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="@string/method_post"
+                                    android:textColor="@color/colorBlindBlack"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="@string/type_json"
+                                    android:textColor="@color/colorBlindBlack"
+                                    android:textSize="14sp" />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="@string/request_payload"
+                                    android:textColor="@color/colorBlindBlack"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="@string/response_body"
+                                    android:textColor="@color/colorBlindBlack"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="{"
+                                    android:textColor="@color/colorBlindBlack"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/reply_body"
+                                    android:textColor="@color/colorBlindBlack"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="}"
+                                    android:textColor="@color/colorBlindBlack"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <Button
+                                android:id="@+id/test_server_rules"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:backgroundTint="#94CBCD"
+                                android:text="@string/test_server"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <include layout="@layout/banner_ads_layout" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

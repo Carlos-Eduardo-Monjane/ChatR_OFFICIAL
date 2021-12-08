@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="teal_200">#257ABC</color>
+    <color name="teal_700">#2196F3</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="fab_color">#6200EE</color>
+    <color name="colorBlindBlack">#232323</color>
+    <color name="colorGrey">#9f9f9f</color>
+    <color name="slightGrey">#DEDEDE</color>
+
+    <color name="GrayWolf">#504A4B</color>
+    <color name="VampireGray">#565051</color>
+    <color name="CarbonGray">#625D5D</color>
+    <color name="CloudyGray">#6D6968</color>
+    <color name="Granite">#837E7C</color>
+    <color name="BlueDress">#157DEC</color>
+    <color name="Azure">#F0FFFF</color>
+    <color name="DarkTurquoise">#2196F3</color>
+    <color name="Teal">#03A9F4</color>
+    <color name="Cantaloupe">#FFA62F</color>
+    <color name="Coral">#FF7F50</color>
+    <color name="MilkWhite">#FEFCFF</color>
+    <color name="chatBubbleDark">#9EE1EE</color>
+    <color name="chatBubbleLight">#BED8DD</color>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    >
+
+    <Button
+        android:id="@+id/import_rules"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Import All Rules"
+        android:backgroundTint="#28B463"
+        android:textColor="@color/black"
+        />
+
+    <Button
+        android:id="@+id/export_rules"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Export All Rules"
+        android:backgroundTint="#F7DC6F"
+        android:textColor="@color/black"
+        />
+
+</LinearLayout>

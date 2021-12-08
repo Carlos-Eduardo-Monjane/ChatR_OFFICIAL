@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@mipmap/ic_launcher"
+        android:gravity="center_vertical" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_eight"
+        android:background="@drawable/button_background"
+        android:elevation="@dimen/margin_sixteen"
+        android:paddingStart="@dimen/margin_eight"
+        android:paddingEnd="@dimen/margin_eight"
+        android:text="@string/turn_on_notification_listening_service"
+        android:textColor="@color/white" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/chatting_animation"/>
+    <include layout="@layout/banner_ads_layout" />
+</LinearLayout>

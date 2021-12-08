@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="@string/menu_home"
+            />
+        <item
+            android:id="@+id/nav_sentMessages"
+            android:icon="@drawable/ic_baseline_textsms_24"
+            android:title="@string/menu_sent_messages" />
+        <item
+            android:id="@+id/nav_messageANumber"
+            android:icon="@drawable/ic_baseline_person_24"
+            android:title="@string/menu_messageANumber" />
+
+        <item
+            android:id="@+id/nav_bulk_sender"
+            android:icon="@drawable/ic_baseline_format_list_numbered_24"
+            android:title="@string/bulk_messaging" />
+
+        <item
+            android:id="@+id/nav_terms"
+            android:icon="@drawable/ic_baseline_playlist_add_check_24"
+            android:title="@string/menu_terms" />
+        <item
+            android:id="@+id/nav_policy"
+            android:icon="@drawable/ic_baseline_published_with_changes_24"
+            android:title="@string/menu_policy" />
+        <item
+            android:id="@+id/nav_rateus"
+            android:icon="@drawable/ic_baseline_star_rate_24"
+            android:title="@string/menu_rateus" />
+    </group>
+</menu>

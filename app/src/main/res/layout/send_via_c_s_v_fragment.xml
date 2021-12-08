@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:id="@+id/root_layout"
+    tools:context=".ui.fragments.tab_csv.SendViaCSVFragment">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_new_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:backgroundTint="@color/teal_700"
+        android:layout_marginBottom="80dp"
+        android:src="@drawable/ic_add_white"
+        android:contentDescription="@string/add_new_campaign" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/downloadSample"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="@color/BlueDress"
+        android:src="@drawable/ic_baseline_arrow_circle_down_24"
+        android:contentDescription="@string/add_new_campaign" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/usersList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/no_data_found"
+        />
+    <include layout="@layout/banner_ads_layout" />
+</FrameLayout>

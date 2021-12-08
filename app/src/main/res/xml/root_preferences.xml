@@ -1,0 +1,244 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="General">
+
+        <SwitchPreferenceCompat
+            app:key="@string/keyReplySettings"
+            app:defaultValue="true"
+            app:summaryOff="Sending Replies are now turned off."
+            app:summaryOn="This will now let the app send replies based on your rules."
+            app:title="Auto Replies"
+            app:enabled="true"
+            app:persistent="true"
+            android:defaultValue="true"
+            android:icon="@drawable/ic_baseline_reply_24"
+            />
+
+        <SwitchPreferenceCompat
+            app:key="@string/key_darkmode"
+            app:defaultValue="false"
+            app:summaryOff="Dark Mode is off."
+            app:summaryOn="Dark mode is on."
+            app:title="Dark Mode"
+            android:icon="@drawable/ic_baseline_nights_stay_24"
+            />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Apps">
+
+        <SwitchPreferenceCompat
+            app:key="@string/keyWhatsapp"
+            app:defaultValue="true"
+            app:summaryOff="Will not reply to Whatspap"
+            app:summaryOn="Will reply on Whatsapp"
+            app:title="Reply on Whatsapp"
+            app:enabled="true"
+            app:persistent="true"
+            android:defaultValue="true"
+            android:icon="@drawable/ic_baseline_mark_chat_read_24"
+            />
+
+        <SwitchPreferenceCompat
+            app:key="@string/keyWhatsappBusiness"
+            app:defaultValue="true"
+            app:summaryOff="Will not reply to Whatspap Business"
+            app:summaryOn="Will reply on Whatsapp Business"
+            app:title="Reply on Whatsapp Business"
+            app:enabled="true"
+            app:persistent="true"
+            android:defaultValue="true"
+            android:icon="@drawable/ic_baseline_mark_chat_read_24"
+            />
+
+        <SwitchPreferenceCompat
+            app:key="@string/keyGBWhatsapp"
+            app:defaultValue="true"
+            app:summaryOff="Will not reply to GBWhatsapp"
+            app:summaryOn="Will reply on GBWhatsapp"
+            app:title="Reply on GBWhatsapp"
+            app:enabled="true"
+            app:persistent="true"
+            android:defaultValue="true"
+            android:icon="@drawable/ic_baseline_mark_chat_read_24"
+            />
+
+        <SwitchPreferenceCompat
+            app:key="@string/keyWhatsappPlus"
+            app:defaultValue="true"
+            app:summaryOff="Will not reply to Whatspap+"
+            app:summaryOn="Will reply on Whatsapp+"
+            app:title="Reply on Whatsapp Plus"
+            app:enabled="true"
+            app:persistent="true"
+            android:defaultValue="true"
+            android:icon="@drawable/ic_baseline_mark_chat_read_24"
+            />
+
+        <SwitchPreferenceCompat
+            app:key="@string/keyInstagram"
+            app:defaultValue="true"
+            app:summaryOff="Will not reply to Instagram"
+            app:summaryOn="Will reply on Instagram"
+            app:title="Reply on Instagram"
+            app:enabled="true"
+            app:persistent="true"
+            android:defaultValue="true"
+            android:icon="@drawable/ic_baseline_mark_chat_read_24"
+            />
+
+        <SwitchPreferenceCompat
+            app:key="@string/keyFbMessenger"
+            app:defaultValue="true"
+            app:summaryOff="Will not reply to Fb Messenger"
+            app:summaryOn="Will reply on Fb Messenger"
+            app:title="Reply on Fb Messenger"
+            app:enabled="true"
+            app:persistent="true"
+            android:defaultValue="true"
+            android:icon="@drawable/ic_baseline_mark_chat_read_24"
+            />
+
+        <SwitchPreferenceCompat
+            app:key="@string/keyTelegram"
+            app:defaultValue="true"
+            app:summaryOff="Will not reply to Telegram"
+            app:summaryOn="Will reply on Telegram"
+            app:title="Reply on Telegram"
+            app:enabled="true"
+            app:persistent="true"
+            android:defaultValue="true"
+            android:icon="@drawable/ic_baseline_mark_chat_read_24"
+            />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Notifications">
+        <SwitchPreferenceCompat
+            app:key="notification_settings"
+            app:defaultValue="true"
+            app:summaryOff="You ll not get notification when autoreply is sent."
+            app:summaryOn="You ll get notifications when autoreply is sent."
+            app:title="Notifications on AutoReply"
+            android:icon="@drawable/ic_baseline_notifications_24"
+            />
+    </PreferenceCategory>
+    <PreferenceCategory app:title="Filters">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="reply_to_saved_no_only"
+            android:summary="The auto reply will send to saved numbers only"
+            android:title="Only Saved Contacts"
+            app:icon="@drawable/ic_baseline_person_add_disabled_24"
+            />
+        <SwitchPreferenceCompat
+            app:key="reply_to_groups"
+            app:defaultValue="true"
+            app:summaryOff="Not replying to groups."
+            app:summaryOn="Replying to groups also."
+            app:title="Reply To Groups"
+            android:icon="@drawable/ic_baseline_group_24"
+            />
+    </PreferenceCategory>
+    <PreferenceCategory app:title="Timings">       
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="monday"
+            android:summary="Auto reply will work on monday"
+            android:title="Monday"
+            android:icon="@drawable/ic_baseline_perm_contact_calendar_24"
+            />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="tuesday"
+            android:summary="Auto reply will work on tuesday"
+            android:title="Tuesday"
+            android:icon="@drawable/ic_baseline_perm_contact_calendar_24"
+            />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="wednesday"
+            android:summary="Auto reply will work on wednesday"
+            android:title="Wednesday"
+            android:icon="@drawable/ic_baseline_perm_contact_calendar_24"
+            />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="thursday"
+            android:summary="Auto reply will work on thursday"
+            android:title="Thursday"
+            android:icon="@drawable/ic_baseline_perm_contact_calendar_24"/>
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="friday"
+            android:summary="Auto reply will work on friday"
+            android:title="Friday"
+            android:icon="@drawable/ic_baseline_perm_contact_calendar_24"/>
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="saturday"
+            android:summary="Auto reply will work on saturday"
+            android:title="Saturday"
+            android:icon="@drawable/ic_baseline_perm_contact_calendar_24"/>
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="sunday"
+            android:summary="Auto reply will work on sunday"
+            android:title="Sunday"
+            android:icon="@drawable/ic_baseline_perm_contact_calendar_24"/>
+
+        <ListPreference
+            android:key="delay_reply"
+            android:title="Delay in Reply"
+            android:dialogTitle="Select Delay Time"
+            android:icon="@drawable/ic_baseline_timelapse_24"
+            android:entries="@array/delay_reply_items_array"
+            android:entryValues="@array/delay_reply_values_array"
+            />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Signature">
+        <EditTextPreference
+            android:defaultValue=""
+            android:key="header_message"
+            android:summary="Add a message to every reply at Top"
+            android:title="Header Message"
+            android:icon="@drawable/ic_baseline_message_24"
+            />
+        <EditTextPreference
+            android:defaultValue=""
+            android:key="footer_message"
+            android:summary="Add a message to every reply in End"
+            android:title="Footer Message"
+            android:icon="@drawable/ic_baseline_message_24"
+            />
+    </PreferenceCategory>
+
+    <!--<PreferenceCategory app:title="Limits">
+        <EditTextPreference
+            android:defaultValue="500"
+            android:key="auto_reply_daily_limit"
+            android:summary="Limit of sending auto replies on daily basis"
+            android:title="Auto Reply daily limit"
+            android:icon="@drawable/ic_baseline_speaker_notes_off_24"
+            android:inputType="number"
+            android:digits="0123456789"
+            />
+        <EditTextPreference
+            android:defaultValue="500"
+            android:key="bulk_message_daily_limit"
+            android:summary="Add a limit for bulk messaging on daily basis"
+            android:title="Bulk message daily limit"
+            android:inputType="number"
+            android:digits="0123456789"
+            android:icon="@drawable/ic_baseline_speaker_notes_off_24"
+            />
+    </PreferenceCategory>-->
+</PreferenceScreen>
